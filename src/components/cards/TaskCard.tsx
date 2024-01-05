@@ -54,7 +54,7 @@ function TaskCard({ task, onReloadClick }: TaskCardProps) {
     e.preventDefault();
 
     // console.log(editTasks);
-    const res = await fetch(`${urlBack}/tasks/${task.id}`, {
+    const res = await fetch(`${urlBack}/api/tasks/${task.id}`, {
       method: "PATCH",
       credentials: "include",
       headers: {
@@ -75,7 +75,7 @@ function TaskCard({ task, onReloadClick }: TaskCardProps) {
   const handleDelete = async (e: any) => {
     e.preventDefault();
     // console.log("a");
-    const res = await fetch(`${urlBack}/tasks/${task.id}`, {
+    const res = await fetch(`${urlBack}/api/tasks/${task.id}`, {
       method: "DELETE",
       credentials: "include",
       headers: {

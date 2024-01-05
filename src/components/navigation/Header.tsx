@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ onReloadClick }) => {
     if (user) {
       tasks.userId = user.id.toString();
       // console.log(tasks);
-      const res = await fetch(`${urlBack}/tasks/create-task`, {
+      const res = await fetch(`${urlBack}/api/tasks/create-task`, {
         method: "post",
         credentials: "include",
         headers: {
