@@ -25,7 +25,7 @@ function Login() {
 
     const urlBack = process.env.NEXT_PUBLIC_API_GATEWAY_FW as string;
     console.log("URL", urlBack);
-    const res = await fetch(`${urlBack}/auth/login`, {
+    const res = await fetch(`${urlBack}/api/auth/login`, {
       method: "post",
       credentials: "include",
       headers: {
