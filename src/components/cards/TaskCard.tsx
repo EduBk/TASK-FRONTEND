@@ -31,7 +31,7 @@ interface TaskCardProps {
 function TaskCard({ task, onReloadClick }: TaskCardProps) {
   const [open, setOpen] = useState(false);
   const cookie = Cookies.get("AuthUser");
-  const urlBack = process.env.NEXT_PUBLIC_API_GATEWAY_FW as string;
+  const urlBack = process.env.NEXT_PUBLIC_API_BASE_URL as string;
   const options: Intl.DateTimeFormatOptions = {
     day: "numeric",
     month: "short",

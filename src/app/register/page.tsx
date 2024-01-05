@@ -30,7 +30,7 @@ function Register() {
       alert("Las contraseñas no coinciden.");
       return false;
     }
-    const urlBack = process.env.NEXT_PUBLIC_API_GATEWAY_FW as string;
+    const urlBack = process.env.NEXT_PUBLIC_API_BASE_URL as string;
     const res = await fetch(`${urlBack}/auth/register`, {
       method: "post",
       credentials: "include",

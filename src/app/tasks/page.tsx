@@ -18,7 +18,7 @@ interface Task {
 function Tasks() {
   const { user, logout } = useAuth();
   const cookie = Cookies.get("AuthUser");
-  const urlBack = process.env.NEXT_PUBLIC_API_GATEWAY_FW as string;
+  const urlBack = process.env.NEXT_PUBLIC_API_BASE_URL as string;
 
   const [tasks, setTasks] = useState<Task[]>([]);
 
