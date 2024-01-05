@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ onReloadClick }) => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const urlBack = process.env.NEXT_PUBLIC_API_GATEWAY_FW as string;
+    const urlBack = process.env.NEXT_PUBLIC_API_BASE_URL as string;
     if (user) {
       tasks.userId = user.id.toString();
       // console.log(tasks);

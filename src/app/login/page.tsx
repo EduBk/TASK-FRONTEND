@@ -23,7 +23,7 @@ function Login() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    const urlBack = process.env.NEXT_PUBLIC_API_GATEWAY_FW as string;
+    const urlBack = process.env.NEXT_PUBLIC_API_BASE_URL as string;
     console.log("URL", urlBack);
     const res = await fetch(`${urlBack}/api/auth/login`, {
       method: "post",
