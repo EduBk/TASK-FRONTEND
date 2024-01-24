@@ -23,5 +23,5 @@ export async function middleware(request: NextRequest) {
 
 //! Aqui se declaran las rutas donde validara el middleware. (ruta que no se encuentre en esta seccion, sera ruta que no tendra ninguna proteccion)
 export const config = {
-  matcher: ["/", "/tasks/:path*"],
+  matcher: ["/"],
 };
