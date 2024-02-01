@@ -40,21 +40,19 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   };
 
   const logout = () => {
+    localStorage.removeItem('User');
     setUser(null);
   };
- 
-  useEffect(() => {
-    // Lee la cookie en el lado del cliente
-    const miCookie = document.cookie
-      .split(";")
-      .find((cookie) => cookie.trim().startsWith("User="));
 
-    if (miCookie) {
-      const userAuth = JSON.parse(decodeURIComponent(miCookie.split("=")[1]));
+  useEffect(() => {
+    // Intenta leer el token desde localStorage
+    const storedUser = localStorage.getItem("User");
+
+    if (storedUser) {
+      const userAuth = JSON.parse(storedUser);
       login(userAuth);
-      // console.log("Contenido de la cookie:", userAuth);
     } else {
-      console.log("La cookie no se encontró.");
+      console.log("No existe un usuario autenticado.");
     }
   }, []);
 
