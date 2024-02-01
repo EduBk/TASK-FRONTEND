@@ -36,6 +36,7 @@ function Login() {
     if (response.errors) {
       alert(response.errors);
     } else {
+      localStorage.setItem("User", JSON.stringify(response));
       login(response);
       router.push("/tasks");
       router.refresh();
