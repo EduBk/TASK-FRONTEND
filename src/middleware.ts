@@ -7,7 +7,7 @@ export async function middleware(request: NextRequest) {
   const cookieName = process.env.COOKIE_NAME as string;
   const secret = process.env.SESSION_SECRET as string;
   const jwt = request.cookies.get(cookieName);
-  console.log('a', request.cookies);
+
   if (jwt === undefined) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
