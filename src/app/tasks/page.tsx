@@ -26,7 +26,7 @@ function Tasks() {
     const fetchData = async () => {
       try {
         if (user && cookie) {
-          const res = await fetch(`${urlBack}/api/tasks?userId=${user.id}`, {
+          const res = await fetch(`${urlBack}/tasks?userId=${user.id}`, {
             method: "GET",
             credentials: "include",
             headers: {
@@ -49,7 +49,7 @@ function Tasks() {
   const reloadTasks = async () => {
     try {
       if (user && cookie) {
-        const res = await fetch(`${urlBack}/api/tasks?userId=${user.id}`, {
+        const res = await fetch(`${urlBack}/tasks?userId=${user.id}`, {
           method: "GET",
           credentials: "include",
           headers: {

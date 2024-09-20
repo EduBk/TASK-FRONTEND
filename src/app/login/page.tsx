@@ -24,7 +24,7 @@ function Login() {
     e.preventDefault();
 
     const urlBack = process.env.NEXT_PUBLIC_API_BASE_URL as string;
-    const res = await fetch(`${urlBack}/api/auth/login`, {
+    const res = await fetch(`${urlBack}/auth/login`, {
       method: "post",
       credentials: "include",
       headers: {
